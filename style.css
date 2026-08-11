@@ -1,0 +1,399 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    color: black;
+    background: white;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    display: grid;
+    grid-template-columns: 7fr 1fr 2fr 1fr;
+    column-gap: 10px;
+    align-items: center;
+    padding: 28px 28px;
+}
+
+.header a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+
+.header a:nth-child(2),
+.header a:nth-child(3) {
+    justify-self: center;
+}
+
+.header a:last-child {
+    justify-self: end;
+}
+
+
+/* =========================
+   LANDING PAGE
+========================= */
+
+.landing {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: calc(100vh - 100px);
+    padding: 28px;
+}
+
+.bio {
+    align-self: center;
+    transform: translateY(80px);
+    max-width: 430px;
+}
+
+.statement {
+    align-self: center;
+    transform: translateY(-100px);
+    justify-self: end;
+    max-width: 430px;
+}
+
+.landing p {
+    font-size: 12px;
+    line-height: 1.56;
+}
+
+.bio h1 {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 0 20px;
+}
+
+.bio p + p {
+    margin-top: 20px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+}
+
+.footer p {
+    font-size: 12px;
+}
+
+
+/* =========================
+   WORKS PAGE
+========================= */
+
+.works-page {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    height: calc(100vh - 70px);
+}
+
+
+/* =========================
+   PROJECT MENU
+========================= */
+
+.project-menu {
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    justify-content: end;
+}
+
+.project-menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    line-height: 1.56;
+    white-space: nowrap;
+}
+
+
+/* =========================
+   PROJECT CONTENT
+========================= */
+
+.project-content {
+    overflow-y: scroll;
+
+    padding: 80px 28px 28px 84px;
+}
+
+
+/* =========================
+   PROJECT TITLE
+========================= */
+
+.project-content h1 {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.45;
+    max-width: 310px;
+}
+
+
+/* =========================
+   PROJECT META
+========================= */
+
+.project-meta {
+    font-size: 12px;
+    font-style: italic;
+
+    margin-top: 4px;
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   PROJECT TEXT
+========================= */
+
+.project-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 30px;
+
+    max-width: 1000px;
+}
+
+.project-text p {
+    font-size: 12px;
+    line-height: 1.56;
+    margin-bottom: 14px;
+}
+
+
+/* =========================
+   IMAGE ROW
+   Work1 + Work2
+========================= */
+
+.project-images {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 12px;
+
+    margin-top: 40px;
+}
+
+.project-images img {
+    width: 100%;
+    height: 480px;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+}
+
+
+/* =========================
+   FULL WIDTH IMAGE
+   Work3
+========================= */
+
+.project-image-full {
+    width: 100%;
+
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.project-text + .project-image-full {
+    margin-top: 40px;
+}
+
+.project-image-full img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+
+/* =========================
+   SECOND IMAGE ROW
+   Work4 + Work5
+========================= */
+
+/*
+   This specifically overrides the 60px
+   margin used by the first image row.
+*/
+
+.project-image-full + .project-images {
+    margin-top: 0;
+}
+
+.photo-credit {
+    font-size: 12px;
+    line-height: 1.4;
+    margin-top: 14px;
+    margin-bottom: 20px;
+}
+
+.project-video {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.project-video video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-video iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+.vimeo-embed {
+    position: relative;
+    padding-top: 56.25%;
+}
+
+.vimeo-embed iframe {
+    position: absolute;
+    inset: 0;
+}
+
+.project-venue {
+    font-size: 12px;
+    line-height: 1.56;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+.project-images img:nth-child(1) {
+    object-position: 30% center;
+}
+
+.project-images img:nth-child(2) {
+    object-position: center 30%;
+}
+
+.project-menu a.active {
+    text-decoration: underline;
+}
+
+.works-intro {
+    font-size: 12px;
+    line-height: 1.56;
+    margin: 0;
+    padding-left: 0;
+    transform: translateY(320px);
+}
+
+/* =========================
+   CV PAGE
+========================= */
+
+.cv-page {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    min-height: calc(100vh - 70px);
+}
+
+.cv-section {
+    padding: 80px 28px 28px 84px;
+    max-width: 1000px;
+}
+
+.cv-section h1 {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 0 20px;
+}
+
+.cv-subsection {
+    margin-top: 56px;
+}
+
+.cv-subsection h2 {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 0 20px;
+}
+
+.cv-bio p {
+    font-size: 12px;
+    line-height: 1.56;
+    margin: 0;
+    max-width: calc((1000px - 30px) / 2);
+}
+
+.cv-entry {
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    column-gap: 30px;
+    margin-bottom: 4px;
+}
+
+.cv-entry p {
+    font-size: 12px;
+    line-height: 1.56;
+    margin: 0;
+}
+
+.cv-date {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.cv-last-updated {
+    position: fixed;
+    bottom: 28px;
+    left: 28px;
+    font-size: 12px;
+}
+
+@media (max-width: 700px) {
+    .cv-page {
+        display: block;
+    }
+
+    .cv-section {
+        padding: 60px 28px 28px;
+    }
+
+    .cv-entry {
+        grid-template-columns: 1fr;
+        row-gap: 4px;
+    }
+
+    .cv-date {
+        text-align: left;
+    }
+}
