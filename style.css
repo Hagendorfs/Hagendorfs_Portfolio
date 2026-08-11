@@ -347,6 +347,18 @@ body {
     margin: 0 0 20px;
 }
 
+.cv-year {
+    display: none;
+}
+
+.cv-entry-venue::before {
+    content: "| ";
+}
+
+.cv-degree-short {
+    display: none;
+}
+
 .cv-bio p {
     font-size: 12px;
     line-height: 1.56;
@@ -380,12 +392,79 @@ body {
 }
 
 @media (max-width: 700px) {
+    .header {
+        grid-template-columns: 1fr auto auto auto;
+        column-gap: 12px;
+        padding: 20px;
+    }
+
+    .landing {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        gap: 80px;
+        padding: 64px 20px 100px;
+    }
+
+    .bio,
+    .statement {
+        align-self: auto;
+        justify-self: auto;
+        max-width: none;
+        transform: none;
+    }
+
+    .works-page {
+        display: block;
+        height: auto;
+    }
+
+    .project-menu {
+        align-items: flex-start;
+        gap: 12px;
+        justify-content: flex-start;
+        padding: 40px 20px 28px;
+    }
+
+    .project-menu a {
+        white-space: normal;
+    }
+
+    .project-content {
+        overflow: visible;
+        padding: 36px 20px 80px;
+    }
+
+    .project-text,
+    .project-images {
+        grid-template-columns: 1fr;
+    }
+
+    .project-images {
+        gap: 12px;
+    }
+
+    .project-images img {
+        height: auto;
+    }
+
+    .project-content h1 {
+        max-width: none;
+    }
+
+    .works-intro {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        text-align: left;
+        transform: none;
+    }
+
     .cv-page {
         display: block;
     }
 
     .cv-section {
-        padding: 60px 28px 28px;
+        padding: 60px 20px 48px;
     }
 
     .cv-entry {
@@ -393,7 +472,64 @@ body {
         row-gap: 4px;
     }
 
+    .cv-subsection .cv-date {
+        display: none;
+    }
+
+    .cv-subsection .cv-entry {
+        margin-bottom: 10px;
+    }
+
+    .cv-entry-venue {
+        display: block;
+    }
+
+    .cv-entry-venue::before {
+        content: none;
+    }
+
+    .cv-degree-full {
+        display: none;
+    }
+
+    .cv-degree-short {
+        display: inline;
+    }
+
+    .cv-year {
+        display: block;
+        font-size: 12px;
+        font-weight: normal;
+        margin: 8px 0 4px;
+    }
+
+    .cv-subsection h2 + .cv-year {
+        margin-top: 0;
+    }
+
     .cv-date {
         text-align: left;
+    }
+
+    .cv-bio p {
+        max-width: none;
+    }
+
+    .footer {
+        position: static;
+        padding: 0 20px 20px;
+        text-align: right;
+    }
+
+    .landing + .footer {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        padding: 0;
+    }
+
+    .cv-last-updated {
+        position: static;
+        padding: 0 20px 20px;
     }
 }
