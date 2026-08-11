@@ -286,8 +286,8 @@ const initialContent = document.getElementById("project-content");
 initialContent.innerHTML = `
 
 <p class="works-intro">
-    Being a man means pissing all over the toilet seat<br>
-    but wiping it clean afterward.
+    Being a man means pissing all over<br>
+    the toilet seat but wiping it clean afterward.
 </p>
 
 `;
